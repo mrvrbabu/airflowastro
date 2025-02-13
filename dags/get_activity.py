@@ -16,6 +16,7 @@ import requests
 def fetch_activity_func():
     r = requests.get(Variable.get('API'))
     return r.json()
+    print("Hello Airlfow")
 
 @aql.dataframe(task_id="print_activity")
 def print_activity_func(fetch_activity: pd.DataFrame):
